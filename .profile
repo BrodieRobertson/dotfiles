@@ -12,6 +12,6 @@ export PAGER="less"
 export WM="i3"
 #export RANGER_LOAD_DEFAULT_RC=FALSE
 
-if [[ "$(tty)" = "/dev/tty1" ]]; then
+if [[ $(tty) = "/dev/tty1" ]]; then
 	pgrep i3 || startx
 fi
