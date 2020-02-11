@@ -1,5 +1,5 @@
 alias v='nvim'
-alias sv='sudo nvim'
+alias sv='sudo -e'
 alias p='pandoc'
 alias m='mpv'
 alias r='ranger'
