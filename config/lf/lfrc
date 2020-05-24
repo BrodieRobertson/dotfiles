@@ -37,6 +37,8 @@ cmd chmod ${{
   do
     chmod $ans $file
   done
+  
+  lf -remote 'send reload'
 }}
 
 cmd sudomkfile ${{
