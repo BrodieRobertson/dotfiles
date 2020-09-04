@@ -37,7 +37,7 @@ super + control + {h,j,k,l}
 
 # Toggle fullscreen on and off
 super + f
-  crystal --fullscreen
+  crystal --toggle fullscreen
 
 # Toggle floating on and off
 super + o
