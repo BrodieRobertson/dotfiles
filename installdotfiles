@@ -44,7 +44,7 @@ ln -sf $path/config/VSCodium/settings.json $HOME/.config/VSCodium/User/settings.
 [ -d $HOME/.config/alacritty ] && rm -rf $HOME/.config/alacritty
 ln -sf $path/config/alacritty $HOME/.config/alacritty
 
-[ -d $HOME/.config/bookmenu ] && rm -rf $HOME/.config/bookmenu
+[ -d $HOME/.config/blender ] && rm -rf $HOME/.config/blender
 ln -sf $path/config/blender $HOME/.config/blender
 
 [ -d $HOME/.config/bookmenu ] && rm -rf $HOME/.config/bookmenu
