@@ -1,0 +1,15 @@
+{
+    "vscode-neovim.neovimPath": "/usr/bin/nvim",
+    "window.zoomLevel": 0,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "editor.fontFamily": "Source Code Pro Medium",
+    "editor.fontSize": 14,
+    "terminal.integrated.shellArgs.windows": ["-l"],
+    "terminal.integrated.shell.windows": "C:\\Program Files\\Git\\bin\\bash.exe",
+    "editor.minimap.enabled": false,
+    "workbench.list.automaticKeyboardNavigation": false,
+    "editor.lineNumbers": "relative",
+    "vim.useCtrlKeys": true,
+    "vim.useSystemClipboard": true,
+    "typescript.updateImportsOnFileMove.enabled": "always"
+}

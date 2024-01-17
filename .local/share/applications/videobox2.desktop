@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Videobox2
+GenericName=Terminal entering Videobox2
+Comment=Terminal entering Videobox2
+Category=Distrobox;System;Utility"
+Exec=/usr/bin/distrobox enter videobox2
+Icon=/home/brodie/.local/share/icons/distrobox/ubuntu.svg
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application

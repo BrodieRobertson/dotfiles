@@ -1,0 +1,45 @@
+Xft.dpi: 96
+URxvt.font: xft:JetBrains Mono Medium:size=12
+URxvt.boldFont: xft:JetBrains Mono Medium:size=12
+URxvt.scrollBar: false
+URxvt.perl-ext-common:resize-font
+URxvt.keysym.C-minus:resize-font:smaller
+URxvt.keysym.C-equal:resize-font:bigger
+URxvt.keysym.C-0:resize-font:reset
+
+! special
+*.foreground:   #d8dee9
+*.background:   #1d1f21
+*.cursorColor:  #d8dee9
+
+! black
+*.color0:       #2d2d2d
+*.color8:       #444444
+
+! red
+*.color1:       #ed0b0b
+*.color9:       #b55454
+
+! green
+*.color2:       #40a62f
+*.color10:      #78a670
+
+! yellow
+*.color3:       #f2e635
+*.color11:      #faf380
+
+! blue
+*.color4:       #327bd1
+*.color12:      #68a7d4
+
+! magenta
+*.color5:       #b30ad0
+*.color13:      #c583d0
+
+! cyan
+*.color6:       #32d0fc
+*.color14:      #8adaf1
+
+! white
+*.color7:       #555555
+*.color15:      #e0e3e7

@@ -1,0 +1,16 @@
+# settings
+
+(GimpGegl-gegl-exposure-config "2022-04-26 12:22:39"
+    (time 1650941559)
+    (black-level 0)
+    (exposure -4.6470000000000002))
+(GimpGegl-gegl-exposure-config "2022-04-26 12:20:05"
+    (time 1650941405)
+    (black-level 0.024)
+    (exposure 3.8239999999999998))
+(GimpGegl-gegl-exposure-config "2019-09-26 14:56:56"
+    (time 1569475616)
+    (black-level 0)
+    (exposure 0.20300000000000001))
+
+# end of settings

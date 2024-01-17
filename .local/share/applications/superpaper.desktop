@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Superpaper
+GenericName=Multi-monitor wallpaper manager
+Exec=superpaper
+Icon=superpaper
+Terminal=false
+Categories=Utility;

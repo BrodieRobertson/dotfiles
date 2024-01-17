@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=XIVLauncher
+Exec=env WINEPREFIX="/home/brodie/games/final-fantasy-xiv-online-xivlauncher" /home/ubuntu/buildbot/runners/wine/lutris-6.10-7-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/brodie/games/final-fantasy-xiv-online-xivlauncher/dosdevices/c:/users/brodie/AppData/Roaming/Microsoft/Windows/Start\\ Menu/Programs/goatsoft/XIVLauncher.lnk
+Type=Application
+StartupNotify=true
+Comment=Custom launcher for FINAL FANTASY XIV
+Path=/home/brodie/games/final-fantasy-xiv-online-xivlauncher/dosdevices/c:/users/brodie/AppData/Local/XIVLauncher/app-6.2.40
+Icon=E6EF_XIVLauncher.0
+StartupWMClass=xivlauncher.exe

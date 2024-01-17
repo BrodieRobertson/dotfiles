@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Test
+GenericName=Terminal entering Test
+Comment=Terminal entering Test
+Category=Distrobox;System;Utility"
+Exec=/usr/bin/distrobox enter test
+Icon=/home/brodie/.local/share/icons/distrobox/ubuntu.svg
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application

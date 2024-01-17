@@ -1,0 +1,75 @@
+[submodule "config/nvim/pack/plugins/start/vim-airline"]
+	path = config/nvim/pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "config/nvim/pack/plugins/start/vim-closetag"]
+	path = config/nvim/pack/plugins/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag.git
+[submodule "config/nvim/pack/plugins/start/fern.vim"]
+	path = config/nvim/pack/plugins/start/fern.vim
+	url = https://github.com/lambdalisue/fern.vim.git
+[submodule "config/nvim/pack/plugins/start/undotree"]
+	path = config/nvim/pack/plugins/start/undotree
+	url = https://github.com/mbbill/undotree.git
+[submodule "config/nvim/pack/plugins/start/goyo.vim"]
+	path = config/nvim/pack/plugins/start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim.git
+[submodule "config/nvim/pack/plugins/start/fern-renderer-nerdfont.vim"]
+	path = config/nvim/pack/plugins/start/fern-renderer-nerdfont.vim
+	url = https://github.com/lambdalisue/fern-renderer-nerdfont.vim.git
+[submodule "config/nvim/pack/plugins/start/vimwiki"]
+	path = config/nvim/pack/plugins/start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "config/nvim/pack/plugins/start/emmet-vim"]
+	path = config/nvim/pack/plugins/start/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "config/nvim/pack/plugins/start/nerdfont.vim"]
+	path = config/nvim/pack/plugins/start/nerdfont.vim
+	url = https://github.com/lambdalisue/nerdfont.vim.git
+[submodule "config/nvim/pack/plugins/start/fzf.vim"]
+	path = config/nvim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git
+[submodule "config/nvim/pack/plugins/start/vim-commentary"]
+	path = config/nvim/pack/plugins/start/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
+[submodule "config/nvim/pack/plugins/start/vim-easymotion"]
+	path = config/nvim/pack/plugins/start/vim-easymotion
+	url = https://github.com/easymotion/vim-easymotion.git
+[submodule "config/nvim/pack/plugins/start/vim-fugitive"]
+	path = config/nvim/pack/plugins/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule "config/nvim/pack/plugins/start/vim-gitgutter"]
+	path = config/nvim/pack/plugins/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "config/nvim/pack/plugins/start/coc.nvim"]
+	path = config/nvim/pack/plugins/start/coc.nvim
+	url = https://github.com/neoclide/coc.nvim.git
+[submodule "config/nvim/pack/plugins/start/vim-hexokinase"]
+	path = config/nvim/pack/plugins/start/vim-hexokinase
+	url = https://github.com/RRethy/vim-hexokinase.git
+[submodule "config/nvim/pack/plugins/start/vim-repeat"]
+	path = config/nvim/pack/plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
+[submodule "config/nvim/pack/plugins/start/vim-surround"]
+	path = config/nvim/pack/plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+[submodule "config/nvim/pack/colors/start/vim-airline-themes"]
+	path = config/nvim/pack/colors/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "config/nvim/pack/colors/start/vim-code-dark"]
+	path = config/nvim/pack/colors/start/vim-code-dark
+	url = https://github.com/tomasiser/vim-code-dark.git
+[submodule "config/nvim/pack/syntax/start/rust.vim"]
+	path = config/nvim/pack/syntax/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "config/nvim/pack/syntax/start/vim-js"]
+	path = config/nvim/pack/syntax/start/vim-js
+	url = https://github.com/yuezk/vim-js.git
+[submodule "config/nvim/pack/syntax/start/vim-jsx-pretty"]
+	path = config/nvim/pack/syntax/start/vim-jsx-pretty
+	url = https://github.com/MaxMEllon/vim-jsx-pretty.git
+[submodule "config/nvim/pack/syntax/start/vim-table-mode"]
+	path = config/nvim/pack/syntax/start/vim-table-mode
+	url = https://github.com/dhruvasagar/vim-table-mode.git
+[submodule "config/nvim/pack/syntax/start/yats.vim"]
+	path = config/nvim/pack/syntax/start/yats.vim
+	url = https://github.com/HerringtonDarkholme/yats.vim.git

@@ -1,0 +1,134 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=/usr/lib/i3blocks/$BLOCK_NAME
+separator_block_width=15
+markup=none
+
+
+# Display any packages to install
+[packages]
+command=echo "📦 $(sudo pacman -Qu | wc -l)"
+separator=true
+interval=1800
+signal=3
+
+# Displays details about the torrents in transmission
+[torrent]
+command=~/scripts/i3torrents
+interval=once
+signal=2
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[memory]
+separator=false
+interval=30
+command=echo "MEM $(~/scripts/i3memory)"
+
+# Disk usage
+#
+# The directory defaults to $HOME if the instance is not specified.
+# The script may be called with a optional argument to set the alert
+# (defaults to 10 for 10%).
+[disk]
+interval=30
+command=echo "HOME $(~/scripts/i3disk)"
+
+# Wifi connectivity level
+[wifi]
+command=echo "📡 $(~/scripts/i3wifi wlp2s0)"
+interval=5
+
+# Network Speed
+#
+# Displays the current network speed
+[network_speed]
+interval=1800
+command=~/scripts/i3speedtest
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+command=echo "CPU $(~/scripts/i3cpu)"
+interval=10
+separator=false
+
+[temp]
+command=~/scripts/i3temp
+interval=10
+seperator=true
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+command=~/scripts/i3battery
+interval=30
+
+# Volume indicator
+#
+# Displays both the master and the headphone volume
+[volume]
+command=~/scripts/i3volume
+interval=once
+signal=1
+
+# Backlight Level
+[light]
+command=echo "☀️️ $(light -G)%"
+interval=once
+signal=4
+
+## Weather
+[weather]
+command=~/scripts/i3weather
+interval=1800
+
+# Date Time
+#
+[time]
+command=date '+%d/%m/%Y %H:%M:%S'
+interval=5
+
+# Key indicators
+#
+# Add the following bindings to i3 config file:
+#
+# bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
+# bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
+#[keyindicator]
+#instance=CAPS
+#interval=once
+#signal=11
+
+#[keyindicator]
+#instance=NUM
+#interval=once
+#signal=11

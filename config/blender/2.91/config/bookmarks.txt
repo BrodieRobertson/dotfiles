@@ -1,0 +1,13 @@
+[Bookmarks]
+[Recent]
+!Home
+/home/brodie/
+/home/brodie/videos/youtube/ToUpload/camera/
+/home/brodie/videos/youtube/ToUpload/vibreoffice/
+/home/brodie/videos/youtube/ToUpload/screenlocker/
+/home/brodie/videos/youtube/ToUpload/firenvim/
+/home/brodie/videos/youtube/ToUpload/awesome-movement/
+/home/brodie/videos/youtube/ToUpload/abandoned-feature-complete/
+/home/brodie/videos/youtube/ToUpload/activitypub/
+/home/brodie/videos/youtube/ToUpload/archiver/
+/home/brodie/videos/podcast/ToUpload/TechnologicShaman/

@@ -1,0 +1,1 @@
+{Intel Open Source Technology Center/Mesa DRI Intel(R) HD Graphics 620 (Kaby Lake GT2) /4.6 (Core Profile) Mesa 19.3.1}=SUPPORTED

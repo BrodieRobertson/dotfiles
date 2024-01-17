@@ -1,0 +1,2 @@
+1 */4 * * * /home/brodie/scripts/transclr
+*/30 * * * * polybar-msg hook pacman-packages 1

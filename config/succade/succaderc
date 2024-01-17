@@ -1,0 +1,70 @@
+[bar]
+name = "testbar"
+blocks = "desktop | | crypto torrents packages cpu cputemp memory volume weather datetime"
+command = "lemonbar -a 15"
+height = 24
+foreground = "#FFFFFF"
+background = "#1D1F21"
+underline = true
+line-width = 3
+line-color = "#268bd2"
+block-prefix = " "
+block-suffix = " "
+block-margin = 4
+font = 6x13
+
+[desktop]
+command = "lemonworkspaces"
+raw = true
+trigger = "bspc subscribe"
+underline = false
+
+[packages]
+command = "lemonpackages"
+interval = 21600
+mouse-left = "updatepackages"
+
+
+[crypto]
+command = "printf C"
+mouse-left = "$BROWSER https://coinmarketcap.com/"
+mouse-right = "notifycrypto"
+
+[torrents]
+command = "printf T"
+mouse-left = "$TERMINAL -e tremc"
+mouse-right = "notifytorrents"
+
+[cpu]
+command = "lemoncpu"
+interval = 10
+mouse-left = "$TERMINAL -e htop"
+
+[cputemp]
+command = "lemoncputemp"
+interval = 10
+
+[memory]
+command = "i3memory"
+interval = 10
+mouse-left = "$TERMINAL -e htop"
+
+[volume]
+command = "polypulsevolume"
+raw = true
+interval = 1
+#trigger = "pulseupdate"
+mouse-left = "$TERMINAL -e pulsemixer"
+mouse-right = "pulsevolctrl "output-mute" "alsa_output.pci-0000_0b_00.4.analog-stereo""
+scroll-up = "pulsevolctrl "output-vol" "alsa_output.pci-0000_0b_00.4.analog-stereo" +2%"
+scroll-down = "pulsevolctrl "output-vol" "alsa_output.pci-0000_0b_00.4.analog-stereo" -2%"
+
+[weather]
+command = "cat ~/.cache/weather"
+interval = 1800
+click-left = "$TERMINAL -e w3m wttr.in/Adelaide"
+
+[datetime]
+command = "lemontime"
+mouse-left = thunderbird
+interval = 1

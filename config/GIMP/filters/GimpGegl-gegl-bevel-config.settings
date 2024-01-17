@@ -1,0 +1,50 @@
+# settings
+
+(GimpGegl-gegl-bevel-config "2023-02-02 19:56:21"
+    (time 1675329981)
+    (gimp-mode burn)
+    (radius1 7.4770000000000003)
+    (bevel1 85.959999999999994)
+    (bevel2 51)
+    (th 0.23599999999999999)
+    (azimuth 76.689999999999998))
+(GimpGegl-gegl-bevel-config "2023-02-01 11:41:11"
+    (time 1675213871)
+    (gimp-mode multiply)
+    (radius1 7.0270000000000001)
+    (bevel1 97.079999999999998)
+    (bevel2 40)
+    (th 0.10000000000000001)
+    (azimuth 40))
+(GimpGegl-gegl-bevel-config "2023-01-31 14:18:19"
+    (time 1675136899)
+    (gimp-mode multiply)
+    (radius1 5.3559999999999999)
+    (bevel1 51.07)
+    (bevel2 67)
+    (th 0.10000000000000001)
+    (azimuth 89.469999999999999))
+(GimpGegl-gegl-bevel-config "2023-01-30 13:47:13"
+    (time 1675048633)
+    (gimp-mode multiply)
+    (radius1 6.1239999999999997)
+    (bevel1 90)
+    (bevel2 50)
+    (th 0.10000000000000001)
+    (azimuth 40))
+(GimpGegl-gegl-bevel-config "2023-01-30 13:43:01"
+    (time 1675048381)
+    (radius1 8.4760000000000009)
+    (bevel1 35.899999999999999)
+    (bevel2 31)
+    (th 0.219)
+    (azimuth 60.960000000000001))
+(GimpGegl-gegl-bevel-config "2023-01-30 13:39:54"
+    (time 1675048194)
+    (radius1 7)
+    (bevel1 55.109999999999999)
+    (bevel2 40)
+    (th 0.27800000000000002)
+    (azimuth 63.899999999999999))
+
+# end of settings

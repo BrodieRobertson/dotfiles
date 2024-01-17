@@ -1,0 +1,4 @@
+[Bookmarks]
+[Recent]
+/home/brodie/models/
+/home/brodie/desktop/

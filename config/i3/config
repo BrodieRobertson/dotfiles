@@ -1,0 +1,243 @@
+# Set mod key
+set $mod Mod4
+
+###---Styling---###
+font xft:Source Code Pro Medium 10
+
+client.focused #0d0d0d #171717 #ffffff #0d0d0d #0d0d0d
+client.unfocused #0d0d0d #363636 #888888 #292d2e #0d0d0d
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+d exec dmenu_run
+
+# alternatively, you can use the cursor keys:
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# Here for testing
+#bindsym $mod+Shift+s layout stacking
+#bindsym $mod+Shift+t layout tabbed
+#bindsym $mod+Shift+i layout toggle split
+#bindsym $mod+Shift+space floating toggle
+#bindsym $mod+space focus mode_toggle
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+# move focused window and swap to that screen
+bindsym $mod+Control+1 move container to workspace $ws1; workspace $ws1
+bindsym $mod+Control+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+Control+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+Control+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+Control+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+Control+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+Control+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+Control+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+Control+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+Control+0 move container to workspace $ws10; workspace $ws10
+
+# Move workspaces betweeen monitors
+bindsym $mod+Control+m move workspace to output primary
+bindsym $mod+Control+s move workspace to output HDMI-1
+bindsym $mod+Control+l move workspace to output right
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+
+# Moves container to the active workspace on another screen
+bindsym $mod+Shift+Control+m move container to output primary
+bindsym $mod+Shift+Control+s move container to output HDMI-1
+bindsym $mod+Shift+Control+l move container to output right
+bindsym $mod+Shift+Control+h move container to output left
+bindsym $mod+Shift+Control+j move container to output down
+bindsym $mod+Shift+Control+k move container to output up
+
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# resize window (you can also use the mouse for that)
+mode "resize" {
+        # These bindings trigger as soon as you enter the resize mode
+
+        # Pressing left will shrink the window’s width.
+        # Pressing right will grow the window’s width.
+        # Pressing up will shrink the window’s height.
+        # Pressing down will grow the window’s height.
+        bindsym $mod+Shift+w resize shrink width 10 px or 5 ppt
+        bindsym $mod+Shift+h resize shrink height 10 px or 5 ppt
+        bindsym $mod+w resize grow width 10 px or 5 ppt
+        bindsym $mod+h resize grow height 10 px or 5 ppt
+
+        # back to normal: Enter or Escape or $mod+r
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
+###---Start external scripts---###
+# Status Bar
+bar {
+    tray_output HDMI-1
+    tray_output primary
+    output HDMI-1
+    output primary
+
+    position bottom
+    status_command i3status
+}
+# BitTorrent daemon
+exec --no-startup-id transmission-daemon
+# Torrent RSS
+exec --no-startup-id transmission-rss -f
+#Wifi Applet
+exec --no-startup-id nm-applet
+# Load Xresources
+exec --no-startup-id xrdb ~/.Xresources
+# Set wallpaper
+exec --no-startup-id feh --bg-scale --no-fehbg ~/.config/wall.png
+# Compositor
+exec --no-startup-id picom -b
+
+###---Cursor speed---###
+exec --no-startup-id xinput set-prop 11 295 1.9
+
+###---Audio controls---###
+bindsym $mod+p exec volctrl Headphone 2%+
+bindsym $mod+shift+p exec volctrl Headphone 2%-
+bindsym $mod+Up exec volctrl Master 2%+
+bindsym $mod+Down exec volctrl Master 2%-
+bindsym $mod+m exec volctrl All mute
+
+###---Mount and unmount android---###
+bindsym $mod+a exec mntandroid
+
+###---Toggle External Display---###
+bindsym $mod+x exec multimonitor
+
+###---Bookmarks/Search---####
+bindsym $mod+s exec sch "firefox"
+bindsym $mod+b exec bm "firefox"
+
+###---Brightness---###
+bindsym $mod+Right exec light -A 5 && pkill -SIGRTMIN+4 i3block
+bindsym $mod+Left exec light -U 5 && pkill -SIGRTMIN+4 i3block
+
+###---System Control---###
+bindsym $mod+shift+z exec prompt "Are you sure you would like to reboot?" "sudo reboot"
+bindsym $mod+shift+x exec prompt "Are you sure you would like to shutdown?" "sudo shutdown"
+bindsym $mod+Shift+b exec betterlockscreen -l
+
+###---Update Packages---###
+bindsym $mod+u exec updatepackages
+
+###---PyShell - Calculators are a meme---###
+bindsym $mod+y exec pyshell
+
+###---List Torrents in Notification
+bindsym $mod+t exec notifytorrents
+
+###---Opens Dev Environment---###
+bindsym $mod+w exec devenv
+
+###---Import Camera Content---###
+bindsym $mod+i exec importandroid
+
+###---Timer(Clock)---###
+bindsym $mod+o exec timer
+
+###---Go To Location Open Terminal---###
+bindsym $mod+g exec openterminalin
+
+###---Screenshot---###
+bindsym $mod+Print exec scrnshot full
+bindsym $mod+shift+Print exec scrnshot select
+bindsym $mod+control+Print exec scrnshot fulltime
+bindsym $mod+control+shift+Print exec scrnshot selecttime
+
+###---Open Youtube Studio In Brave---###
+# The reason I even have this program installed
+bindsym $mod+c exec brave https://studio.youtube.com
+
+###---Toggle touchpad---###
+bindsym F7 exec toggleTouch
+
+###---Launch programs---###
+bindsym $mod+Mod1+a exec st -e alsamixer
+bindsym $mod+Mod1+s exec snap run spotify
+bindsym $mod+Mod1+d exec apulse discord
+bindsym $mod+Mod1+l exec snap run slack
+bindsym $mod+Mod1+k exec kdenlive
+bindsym $mod+Mod1+o exec obs
+bindsym $mod+Mod1+g exec gimp
+bindsym $mod+Mod1+b exec firefox
+bindsym $mod+Mod1+e exec brave
+bindsym $mod+Mod1+f exec dolphin
+bindsym $mod+Mod1+r exec st -e lf
+bindsym $mod+Mod1+c exec vscodium
+bindsym $mod+Mod1+t exec st -e transmission-remote-cli
+bindsym $mod+Mod1+p exec st -e htop
+bindsym $mod+Mod1+i exec virtualbox
+bindsym $mod+Mod1+Return exec urxvt
+bindsym $mod+Shift+Return exec stabmux
+bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Mod1+v exec st -e nvim
+bindsym $mod+Mod1+u exec st -e calcurse
+bindsym $mod+Mod1+j exec st -e joplin

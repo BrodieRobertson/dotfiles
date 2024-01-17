@@ -1,0 +1,13 @@
+{
+  "theme": "~/.config/powerline-shell/theme.py",
+  "segments": [
+    "virtual_env",
+    "username",
+    "hostname",
+    "ssh",
+    "cwd",
+    "git",
+    "hg",
+    "root"
+  ]
+}

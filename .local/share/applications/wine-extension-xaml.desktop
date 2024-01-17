@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Windows Presentation Foundation Host
+MimeType=application/xaml+xml;
+Exec=env WINEPREFIX="/home/brodie/games/final-fantasy-xiv-online-xivlauncher" /home/ubuntu/buildbot/runners/wine/lutris-6.10-7-x86_64/bin/wine start /ProgIDOpen Windows.XamlDocument %f
+NoDisplay=true
+StartupNotify=true
+Icon=00EF_PresentationHost.0

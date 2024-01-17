@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FINAL FANTASY XIV System Information
+Exec=env WINEPREFIX="/home/brodie/games/final-fantasy-xiv-online" /home/ubuntu/buildbot/runners/wine/lutris-ge-6.16-1-x86_64/bin/wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/brodie/games/final-fantasy-xiv-online/dosdevices/c:/ProgramData/Microsoft/Windows/Start\\ Menu/Programs/SQUARE\\ ENIX/FINAL\\ FANTASY\\ XIV\\ ONLINE/FINAL\\ FANTASY\\ XIV\\ System\\ Information.lnk
+Type=Application
+StartupNotify=true
+Path=/home/brodie/games/final-fantasy-xiv-online/dosdevices/c:/Program Files (x86)/SquareEnix/FINAL FANTASY XIV - A Realm Reborn/boot/
+Icon=09B7_FFXIV_sysinfo.0
+StartupWMClass=ffxivsysinfo.exe

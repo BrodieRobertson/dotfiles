@@ -1,0 +1,1 @@
+prefer_mpv=no

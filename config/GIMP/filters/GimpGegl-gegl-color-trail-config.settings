@@ -1,0 +1,16 @@
+# settings
+
+(GimpGegl-gegl-color-trail-config "2023-01-31 14:22:56"
+    (time 1675137176)
+    (shape circlect)
+    (x 13)
+    (y 5.4000000000000004)
+    (gradius 0)
+    (color (color-rgba 0.98225075006484985 0 0.00060705398209393024 1))
+    (color2 (color-rgba 0.99110221862792969 0.20863690972328186 0 1))
+    (color3 (color-rgba 1 1 0.00030352699104696512 1))
+    (color4 (color-rgba 0 0.99110221862792969 0.00030352699104696512 1))
+    (color5 (color-rgba 0 0.99110221862792969 1 1))
+    (radius 5))
+
+# end of settings

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=A Wine application
+MimeType=application/x-wine-extension-compositefont;
+Exec=env WINEPREFIX="/home/brodie/games/final-fantasy-xiv-online-xivlauncher" /home/ubuntu/buildbot/runners/wine/lutris-6.10-7-x86_64/bin/wine start /ProgIDOpen Windows.CompositeFont %f
+NoDisplay=true
+StartupNotify=true

@@ -1,0 +1,183 @@
+#!/bin/sh
+path=$(pwd)
+
+# Home directory
+ln -sf $path/.bash_profile $HOME/.bash_profile
+ln -sf $path/.bashrc $HOME/.bashrc
+ln -sf $path/.gitconfig $HOME/.gitconfig
+ln -sf $path/.imwheelrc $HOME/.imwheelrc
+ln -sf $path/.profile $HOME/.profile
+ln -sf $path/config/nvim/init.vim $HOME/.vimrc
+ln -sf $path/.Xresources $HOME/.Xresources
+ln -sf $path/.xinitrc $HOME/.xinitrc
+ln -sf $path/.Xmodmap $HOME/.Xmodmap
+ln -sf $path/.zcompdump $HOME/.zcompdump
+ln -sf $path/.zprofile $HOME/.zprofile
+ln -sf $path/.zshenv $HOME/.zshenv
+ln -sf $path/.zshrc $HOME/.zshrc
+
+# Config directory
+[ ! -d $HOME/.config ] && mkdir $HOME/.config
+
+[ ! -d $HOME/.config/GIMP ] && mkdir -p $HOME/.config/GIMP/2.10
+[ ! -d $HOME/.config/GIMP/2.10 ] && mkdir $HOME/.config/GIMP/2.10
+ln -sf $path/config/GIMP/filters $HOME/.config/GIMP/2.10/filters
+ln -sf $path/config/GIMP/patterns $HOME/.config/GIMP/2.10/patterns
+
+[ ! -d $HOME/.config/joplin ] && mkdir $HOME/.config/joplin
+ln -sf $path/config/joplin/keymap.json $HOME/.config/joplin/keymap.json
+
+[ ! -d $HOME/.config/nnn ] && mkdir $HOME/.config/nnn
+ln -sf $path/config/nnn/plugins $HOME/.config/nnn/plugins
+
+[ ! -d $HOME/.config/obs-studio ] && mkdir $HOME/.config/obs-studio
+ln -sf $path/config/obs-studio/basic $HOME/.config/obs-studio/basic
+
+[ ! -d $HOME/.config/transmission-daemon ] && mkdir $HOME/.config/transmission-daemon
+ln -sf $path/config/transmission-daemon/settings.json $HOME/.config/transmission-daemon/settings.json
+
+[ ! -d $HOME/.config/VSCodium ] && mkdir -p $HOME/.config/VSCodium/User
+[ ! -d $HOME/.config/VSCodium/User ] && mkdir $HOME/.config/VSCodium/User
+ln -sf $path/config/VSCodium/keybindings.json $HOME/.config/VSCodium/User/keybindings.json
+ln -sf $path/config/VSCodium/settings.json $HOME/.config/VSCodium/User/settings.json
+
+[ -d $HOME/.config/alacritty ] && rm -rf $HOME/.config/alacritty
+ln -sf $path/config/alacritty $HOME/.config/alacritty
+
+[ -d $HOME/.config/bookmenu ] && rm -rf $HOME/.config/bookmenu
+ln -sf $path/config/blender $HOME/.config/blender
+
+[ -d $HOME/.config/bookmenu ] && rm -rf $HOME/.config/bookmenu
+ln -sf $path/config/bookmenu $HOME/.config/bookmenu
+
+[ -d $HOME/.config/broot ] && rm -rf $HOME/.config/broot
+ln -sf $path/config/broot $HOME/.config/broot
+
+[ -d $HOME/.config/bspwm ] && rm -rf $HOME/.config/bspwm
+ln -sf $path/config/bspwm $HOME/.config/bspwm
+
+[ -d $HOME/.config/btops ] && rm -rf $HOME/.config/btops
+ln -sf $path/config/btops $HOME/.config/btops
+
+[ -d $HOME/.config/.calcurse ] && rm -rf $HOME/.config/.calcurse
+ln -sf $path/config/.calcurse $HOME/.config/.calcurse
+
+[ -d $HOME/.config/cfiles ] && rm -rf $HOME/.config/cfiles
+ln -sf $path/config/cfiles $HOME/.config/cfiles
+
+[ -d $HOME/.config/deadd ] && rm -rf $HOME/.config/deadd
+ln -sf $path/config/deadd $HOME/.config/deadd
+
+[ -d $HOME/.config/Dharkael ] && rm -rf $HOME/.config/Dharkael
+ln -sf $path/config/Dharkael $HOME/.config/Dharkael
+
+[ -d $HOME/.config/dunst ] && rm -rf $HOME/.config/dunst
+ln -sf $path/config/dunst $HOME/.config/dunst
+
+[ -d $HOME/.config/gtk-2.0 ] && rm -rf $HOME/.config/gtk-2.0
+ln -sf $path/config/gtk-2.0 $HOME/.config/gtk-2.0
+
+[ -d $HOME/.config/gtk-3.0 ] && rm -rf $HOME/.config/gtk-3.0
+ln -sf $path/config/gtk-3.0 $HOME/.config/gtk-3.0
+
+[ -d $HOME/.config/hunter ] && rm -rf $HOME/.config/hunter
+ln -sf $path/config/hunter $HOME/.config/hunter
+
+[ -d $HOME/.config/i3 ] && rm -rf $HOME/.config/i3
+ln -sf $path/config/i3 $HOME/.config/i3
+
+[ -d $HOME/.config/i3blocks ] && rm -rf $HOME/.config/i3blocks
+ln -sf $path/config/i3blocks $HOME/.config/i3blocks
+
+[ -d $HOME/.config/import ] && rm -rf $HOME/.config/import
+ln -sf $path/config/import $HOME/.config/import
+
+[ -d $HOME/.config/kitty ] && rm -rf $HOME/.config/kitty
+ln -sf $path/config/kitty $HOME/.config/kitty
+
+[ -d $HOME/.config/lf ] && rm -rf $HOME/.config/lf
+ln -sf $path/config/lf $HOME/.config/lf
+
+[ -d $HOME/.config/mpv ] && rm -rf $HOME/.config/mpv
+ln -sf $path/config/mpv $HOME/.config/mpv
+
+[ -d $HOME/.config/neofetch ] && rm -rf $HOME/.config/neofetch
+ln -sf $path/config/neofetch $HOME/.config/neofetch
+
+[ -d $HOME/.config/newsboat ] && rm -rf $HOME/.config/newsboat
+ln -sf $path/config/newsboat $HOME/.config/newsboat
+
+[ -d $HOME/.config/broot ] && rm -rf $HOME/.config/broot
+ln -sf $path/config/broot $HOME/.config/broot
+
+[ -d $HOME/.config/nvim ] && rm -rf $HOME/.config/nvim
+ln -sf $path/config/nvim $HOME/.config/nvim
+
+[ -d $HOME/.config/pcmanfm ] && rm -rf $HOME/.config/pcmanfm
+ln -sf $path/config/pcmanfm $HOME/.config/pcmanfm
+
+[ -d $HOME/.config/pistol ] && rm -rf $HOME/.config/pistol
+ln -sf $path/config/pistol $HOME/.config/pistol
+
+[ -d $HOME/.config/polybar ] && rm -rf $HOME/.config/polybar
+ln -sf $path/config/polybar $HOME/.config/polybar
+
+[ -d $HOME/.config/powerline-shell ] && rm -rf $HOME/.config/powerline-shell
+ln -sf $path/config/powerline-shell $HOME/.config/powerline-shell
+
+[ -d $HOME/.config/ranger ] && rm -rf $HOME/.config/ranger
+ln -sf $path/config/ranger $HOME/.config/ranger
+
+[ -d $HOME/.config/search ] && rm -rf $HOME/.config/search
+ln -sf $path/config/search $HOME/.config/search
+
+[ -d $HOME/.config/shellconfig ] && rm -rf $HOME/.config/shellconfig
+ln -sf $path/config/shellconfig $HOME/.config/shellconfig
+
+[ -d $HOME/.config/sxhkd ] && rm -rf $HOME/.config/sxhkd
+ln -sf $path/config/sxhkd $HOME/.config/sxhkd
+
+[ -d $HOME/.config/tabdmenu ] && rm -rf $HOME/.config/tabdmenu
+ln -sf $path/config/tabdmenu $HOME/.config/tabdmenu
+
+[ -d $HOME/.config/transmission-rfss ] && rm -rf $HOME/.config/transmission-rfss
+ln -sf $path/config/transmission-rfss $HOME/.config/transmission-rfss
+
+[ -d $HOME/.config/twmn ] && rm -rf $HOME/.config/twmn
+ln -sf $path/config/twmn $HOME/.config/twmn
+
+[ -d $HOME/.config/vifm ] && rm -rf $HOME/.config/vifm
+ln -sf $path/config/vifm $HOME/.config/vifm
+
+[ -d $HOME/.config/yay ] && rm -rf $HOME/.config/yay
+ln -sf $path/config/yay/ $HOME/.config/yay/
+
+[ -d $HOME/.config/zathura ] && rm -rf $HOME/.config/zathura
+ln -sf $path/config/zathura/ $HOME/.config/zathura/
+
+ln -sf $path/config/compton.conf $HOME/.config/compton.conf
+ln -sf $path/config/dolphinrc $HOME/.config/dolphinrc
+ln -sf $path/config/kdeglobals $HOME/.config/kdeglobals
+ln -sf $path/config/kdenliverc $HOME/.config/kdenliverc
+ln -sf $path/config/kiorc $HOME/.config/kiorc
+ln -sf $path/config/kservicemenurc $HOME/.config/kservicemenurc
+ln -sf $path/config/ktrashrc $HOME/.config/ktrashrc
+ln -sf $path/config/mimeapps.list $HOME/.config/mimeapps.list
+ln -sf $path/config/pavucontrol.ini $HOME/.config/pavucontrol.ini
+ln -sf $path/config/starship.toml $HOME/.config/starship.toml
+ln -sf $path/config/user-dirs.dirs $HOME/.config/user-dirs.dirs
+ln -sf $path/config/wall.png $HOME/.config/wall.png
+
+# Local directory
+[ ! -d $HOME/.local ] && mkdir -p $HOME/.local/share
+[ ! -d $HOME/.local/share ] && mkdir $HOME/.local/share
+[ -d $HOME/.local/share/applications ] && rm -rf $HOME/.local/share/applications
+ln -sf $path/.local/share/applications $HOME/.local/share/applications
+[ -d $HOME/.local/share/fonts ] && rm -r $HOME/.local/share/fonts
+ln -sf $path/.local/share/fonts $HOME/.local/share/fonts
+
+# Var Directory
+[ ! -d /var ] && sudo mkdir -p /var/spool/cron
+[ ! -d /var/spool ] && sudo mkdir -p /var/spool/cron
+[ -d /var/spool/cron ] && rm -rf /var/spool/cron
+sudo ln -sf $path/cron /var/spool/cron

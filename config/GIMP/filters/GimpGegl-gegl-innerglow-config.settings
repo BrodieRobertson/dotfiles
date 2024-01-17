@@ -1,0 +1,35 @@
+# settings
+
+(GimpGegl-gegl-innerglow-config "2023-02-01 11:47:43"
+    (time 1675214263)
+    (grow-shape circleig)
+    (x 0)
+    (y 0)
+    (radius 0.90700000000000003)
+    (grow-radius 4)
+    (opacity 1.2)
+    (value2 (color-rgba 1 0 0 1))
+    (fixoutline 60))
+(GimpGegl-gegl-innerglow-config "2023-01-31 14:19:50"
+    (time 1675136990)
+    (gimp-mode normal)
+    (grow-shape circleig)
+    (x 0)
+    (y 0)
+    (radius 1.034)
+    (grow-radius 8)
+    (opacity 0.85299999999999998)
+    (value2 (color-rgba 0 0 0 1))
+    (fixoutline 100))
+(GimpGegl-gegl-innerglow-config "2023-01-30 14:17:15"
+    (time 1675050435)
+    (grow-shape circleig)
+    (x 0)
+    (y 0)
+    (radius 0)
+    (grow-radius 4)
+    (opacity 1.2)
+    (value2 (color-rgba 1 0 0 1))
+    (fixoutline 60))
+
+# end of settings

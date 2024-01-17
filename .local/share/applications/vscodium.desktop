@@ -1,0 +1,22 @@
+[Desktop Entry]
+Name=VSCodium (AppImage)
+Comment=Code Editing. Redefined.
+GenericName=Text Editor
+Exec=vscodium %U
+Icon=zap-vscodium
+Type=Application
+StartupNotify=false
+StartupWMClass=VSCodium
+Categories=Utility;TextEditor;Development;IDE;
+MimeType=text/plain;inode/directory;application/x-codium-workspace;
+Actions=new-empty-window;
+Keywords=vscode;
+X-AppImage-Version=1.61.0-1633731004.glibc2.17
+X-AppImage-Integrate=
+X-Zap-Id=vscodium
+
+[Desktop Action new-empty-window]
+Name=New Empty Window
+Exec=codium --new-window %F
+Icon=vscodium
+

@@ -1,0 +1,31 @@
+# settings
+
+(GimpGegl-gegl-long-shadow-config "2019-10-08 17:41:20"
+    (time 1570518680)
+    (style finite)
+    (angle 45.000000)
+    (length 17.300000)
+    (midpoint 0.000000)
+    (midpoint-rel 0.500000)
+    (color (color-rgba 0.531915 0.531915 0.531915 1.000000))
+    (composition shadow-plus-image))
+(GimpGegl-gegl-long-shadow-config "2019-09-18 10:56:02"
+    (time 1568769962)
+    (style finite)
+    (angle 45.000000)
+    (length 25.000000)
+    (midpoint 100.000000)
+    (midpoint-rel 0.500000)
+    (color (color-rgba 0.676596 0.198999 0.000000 1.000000))
+    (composition shadow-plus-image))
+(GimpGegl-gegl-long-shadow-config "Text Shadow"
+    (time 0)
+    (style finite)
+    (angle 45.000000)
+    (length 17.300000)
+    (midpoint 0.000000)
+    (midpoint-rel 0.500000)
+    (color (color-rgba 0.531915 0.531915 0.531915 1.000000))
+    (composition shadow-plus-image))
+
+# end of settings

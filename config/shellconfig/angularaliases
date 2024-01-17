@@ -1,0 +1,4 @@
+alias ngs='ng serve'
+alias ngt='ng test'
+alias nggc='ng generate component'
+alias nggs='ng generate service'

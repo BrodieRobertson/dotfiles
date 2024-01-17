@@ -1,0 +1,256 @@
+# Basic Settings
+#set previewer ~/scripts/lf/preview
+set preview true
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+
+# Custom Functions
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        application/x-executable) "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+cmd sudomkfile ${{
+  printf "File Name: "
+  read ans
+  sudo $EDITOR $ans
+}}
+
+cmd setwallpaper %cp "$f" ~/.config/wall.png && xwallpaper --zoom "$f"
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd open_config  ${{
+  $EDITOR $(bookmenu -b ~/.config/bookmenu/configs -f fzf -o)
+}}
+
+cmd dragon %dragon-drag-and-drop -a -x $fx
+cmd dragon-stay %dragon-drag-and-drop -a $fx
+cmd dragon-individual %dragon-drag-and-drop $fx
+cmd cpdragon %cpdragon
+cmd mvdragon %mvdragon
+cmd dlfile %dlfile
+
+# Archive bindings
+cmd unarchive ${{
+  case "$f" in
+      *.zip) unzip "$f" ;;
+      *.tar.gz) tar -xzvf "$f" ;;
+      *.tar.bz2) tar -xjvf "$f" ;;
+      *.tar) tar -xvf "$f" ;;
+      *) echo "Unsupported format" ;;
+  esac
+}}
+
+cmd zip %zip -r "$f" "$f"
+cmd tar %tar cvf "$f.tar" "$f"
+cmd targz %tar cvzf "$f.tar.gz" "$f"
+cmd tarbz2 %tar cjvf "$f.tar.bz2" "$f"
+
+# Trash cli bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd clear_trash %trash-empty
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+cmd stripspace %stripspace "$f"
+
+# Bindings
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# File Openers
+map ee $$EDITOR "$f"
+map eg $vscodium "$f"
+map u $view "$f"
+
+# Archive Mappings
+map az zip
+map at tar
+map ag targz
+map ab targz
+map au unarchive
+
+# Trash Mappings
+map dd trash
+map tc clear_trash
+map tr restore_trash
+map ttt ${{alacritty}}
+
+# Broot Mapping
+map f broot_jump
+
+# Dragon Mapping
+map dr dragon
+map ds dragon-stay
+map di dragon-individual
+map dm mvdragon
+map dc cpdragon
+map dl dlfile
+
+map ss stripspace
+
+# Basic Functions
+map . set hidden!
+map DD delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map mf mkfile
+map mr sudomkfile
+map md mkdir
+map ms $mkscript
+map ch chmod
+map bg setwallpaper
+map o open_config
+map br $vimv $fx
+map r rename
+map H top
+map L bottom
+map R reload
+map C clear
+map U unselect
+
+# Movement
+map gtr cd ~/.local/share/Trash/files
+map gus cd /run/media/brodie
+
+map gv. cd ~/videos
+map gva cd ~/videos/anime
+
+map gy. cd ~/videos/youtube
+map gyt cd ~/videos/youtube/ToUpload
+map gyu cd ~/videos/youtube/Uploaded
+map gya cd ~/videos/youtube/asset
+map go. cd ~/videos/podcast
+map got cd ~/videos/podcast/ToUpload
+map gou cd ~/videos/podcast/Uploaded
+
+map gp. cd ~/pictures
+map gpm cd ~/pictures/mpvscreenshots
+map gpa cd ~/pictures/Anime
+map gps cd ~/pictures/screenshots
+
+map gw. cd ~/pictures/Wallpapers
+map gww cd ~/pictures/Wallpapers/Wallpapers
+map gwm cd ~/pictures/Wallpapers/MobileWallpapers
+
+map gt. cd ~/documents/Textbooks
+map gt1 cd ~/documents/Textbooks/1stYear
+map gt2 cd ~/documents/Textbooks/2ndYear
+map gt3 cd ~/documents/Textbooks/3rdYear
+map gu3 cd ~/documents/Uni/3rdYear
+map gd cd ~/documents
+
+map gD cd ~/downloads
+map ge cd ~/desktop
+
+map gs. cd ~/scripts
+map gsl cd ~/scripts/lf
+map gsa cd ~/scripts/alsa
+map gsi cd ~/scripts/i3
+map gse cd ~/scripts/lemonbar
+map gsp cd ~/scripts/polybar
+map gsb cd ~/scripts/bspwm
+map gsu cd ~/scripts/pulse
+map gdt cd ~/scripts/transmission
+
+map gr. cd ~/repos
+map grb cd ~/repos/bookmenu
+map grf cd ~/repos/cleanfullscreen
+map grm cd ~/repos/dmenu
+map grd cd ~/repos/dotfiles
+map gri cd ~/repos/init
+map grk cd ~/repos/kanban-board
+map grl cd ~/repos/lbryurlconvert
+map grP cd ~/repos/PerlProjects
+map grr cd ~/repos/reading-list
+map grs cd ~/repos/st
+map grw cd ~/repos/website
+
+map gc cd ~/.config
+map gC cd ~/.local/share/cell
+map gl cd ~/.local
+map gE cd /etc
+map gU. cd /usr
+map gUs cd /usr/share
+
+map \;j cd ~

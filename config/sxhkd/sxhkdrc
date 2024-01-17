@@ -1,0 +1,198 @@
+##---BSPWM Bindings
+# # Quit bspwm
+# super + shift + Escape
+#   prompt "Are you sure you would like to quit this Xsession" "bspc quit"
+#
+# # Restart bspwm
+# super + shift + w
+#   bspc wm -r
+#
+# # Kill Window
+# super + shift + q
+#   crystal --close
+#
+# # Focus on window in direction
+# super + {h,j,k,l}
+# 	bspc node -f {west,south,north,east}
+#
+# #	Send window to desktop
+# super + shift + {0-9}
+#   crystal --send {0-9}
+#
+# # Send window to desktop and swap to desktop
+# super + control + {0-9}
+#   bspc node -d {0-9} && bspunhide && bspc desktop -f {0-9}
+#
+# # Swap nodes the tree from the current nodes parent
+# super + control + {Up, Down}
+#   bspc node @parent -C {forward, backward}
+#
+# # Rotate the tree from the current nodes parent
+# super + control + {Right, Left}
+# 	bspc node @parent --rotate {90,270}
+#
+# # Flip the tree from the current nodes parent
+# super + control + {h,j,k,l}
+#   bspc node @parent -F {vertical,horizontal,horizontal,vertical}
+#
+# # Toggle fullscreen on and off
+# super + f
+#   crystal --fullscreen
+#
+# # Toggle floating on and off
+# super + o
+#   bspc node focused.tiled -t floating || bspc node focused.floating -t tiled
+#
+# # Swap window with direction
+# super + shift + {h,j,k,l}
+# 	bspc node -s {west,south,north,east}
+#
+# # Focus on desktop
+# super + {0-9}
+# 	crystal --focus {0-9}
+#
+# # Cycle through desktops
+# super + alt + {Left, Right}
+#   crystal --focus {prev, next}
+#
+# # Close all receptacle
+# super + shift + i
+#   for win in `bspc query -N -n .leaf.\!window`; do bspc node $win -k ; done;
+#
+# # Insert receptacle
+# super + i; {h,j,k,l}
+#   bspc node --presel-dir {west,south,north,east} -i
+#
+# # Move to rectacle
+# super + r
+#   bspreceptacle
+#
+# # Balance nodes
+# super + e
+#   bspc node @/ -B
+#
+# # Expand a window by moving one of its side outward
+# ctrl + alt + {h,j,k,l}
+# 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+#
+# # Contract a window by moving one of its side inward
+# ctrl + alt + shift + {h,j,k,l}
+# 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+#
+# # Move a floating window
+# ctrl + alt + {Left,Right,Up,Down}
+#   xdo move {-x -20, -x +20, -y -20, -y +20}
+#
+# # Dropdown terminal
+# super + alt + Return
+# 	tdrop -ma -w 1916 -y 0 st
+#
+#  super + shift + o
+#    reloadpolybar
+
+#---System Control---#
+# Restart hotkey damon
+super + shift + x
+  killandnotify "sxhkd" "Config reloaded" && sxhkd &
+
+super + shift + {r, s}
+  prompt {"Are you sure you would like to reboot?" "sudo reboot", "Are you sure you would like to shutdown" "sudo shutdown"}
+
+# Lock the screen
+super + shift + e
+  betterlockscreen -l
+
+super + shift + c
+  toggleprogram "picom" "--experimental-backends"
+
+#---Script Keys---#
+super + {x, u, t, p}
+  {dmonitor "DisplayPort-0" "DisplayPort-1" "HDMI-A-0", updatepackages, notifytorrents, cpcolor}
+
+super + {b, c}
+  {bookmenu -p "Select a bookmark" -b ~/.config/bookmenu/browser -co $BROWSER, bookmenu -p "Select a config" -b ~/.config/bookmenu/configs -co "$TERMINAL --class=DotFile\,e -e nvim"}
+
+super + e
+  dmusic
+
+super + v
+  dvideospace
+
+# Audio Control
+super + F1
+	$TERMINAL -e ncmpcpp
+
+# Pulse Controls
+{XF86AudioRaiseVolume, XF86AudioLowerVolume}
+  pactl set-sink-volume @DEFAULT_SINK@ {+2%, -2%}
+
+XF86AudioMute
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86Mail
+	thunderbird
+
+# Media Controls
+super + F1
+	$TERMINAL -e ncmpcpp
+
+XF86AudioNext
+  playerctl -p "mpd" next
+
+XF86AudioPrev
+  playerctl -p "mpd" previous
+
+XF86AudioPlay
+  playerctl -p "mpd" play-pause
+
+super + F5
+  playerctl -p "mpd" stop
+
+super + slash
+  songnotification
+
+# Brightness
+# super + {Right, Left}
+#   light {-A 5, -U 5} && polybar-msg hook backlight 1
+
+# Screenshots
+Print
+	flameshot full -p ~/pictures/screenshots
+
+Print + shift
+	flameshot gui
+
+Print + super
+	flameshot screen -p ~/pictures/screenshots
+
+#---Application Launchers---#
+super + d
+  dmenu_run -fn "JetBrains Mono Medium-10"
+
+super + Return
+  $TERMINAL
+
+XF86HomePage
+  $BROWSER
+
+super + alt + o
+	flatpak run com.obsproject.Studio
+
+super + alt + {k, g, f, v, s, d}
+  {kdenlive, gimp, pcmanfm, virtualbox, spotify, discord-canary}
+
+super + q
+  brave https://studio.youtube.com
+
+super + e
+  kill -s USR1 $(pidof deadd-notification-center)
+
+super + alt + {a, r, t, h, n, c, p}
+  $TERMINAL -e {alsamixer, lf, transmission-remote-cli, htop, nvim, calcurse, pulsemixer}
+
+super + alt + j
+  $TERMINAL --class="VimWiki,VimWiki" -e nvim $XDG_DATA_HOME/vimwiki/index.wiki
+
+F12
+  date "+%H:%M:%S %d-%m-%y" >> ~/videos/streaming/timestamps
+

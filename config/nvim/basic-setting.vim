@@ -1,0 +1,2 @@
+"set termguicolors
+colorscheme codedark

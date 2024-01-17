@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Arch
+GenericName=Terminal entering Arch
+Comment=Terminal entering Arch
+Category=Distrobox;System;Utility"
+Exec=/usr/bin/distrobox enter arch
+Icon=/home/brodie/.local/share/icons/distrobox/arch.png
+Keywords=distrobox;
+NoDisplay=false
+Terminal=true
+TryExec=/usr/bin/distrobox
+Type=Application

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=kitty  (on )
+GenericName=Terminal emulator  (on )
+Comment=A fast, feature full, GPU based terminal emulator
+Exec=/usr/bin/distrobox-enter  -n  -- '  kitty'
+Icon=kitty
+Categories=System;TerminalEmulator;
+StartupWMClass=kitty

@@ -1,0 +1,41 @@
+Height 1080=1033
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAC0AAADzvwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAA/////wAAAAIA////+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAA7AAADzgAAAEYA////AAAAAQAAAAAAAAAA/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAAAD/////AAAAAgD///8AAAADAAAAAAAAAAD8AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAA/////wAAAAIA////AAAGwgAAA84AAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+Width 1920=1916
+
+[General]
+EditableUrl=true
+ShowFullPath=true
+Version=202
+ViewPropsTimestamp=2019,11,13,10,40,52
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[KPropertiesDialog]
+Height 1080=415
+Width 1920=383
+
+[MainWindow]
+DisplayPort-0 DisplayPort-1 HDMI-A-0 Height 1080=1039
+DisplayPort-0 DisplayPort-1 HDMI-A-0 Width 1920=1237
+DisplayPort-0 DisplayPort-1 HDMI-A-0 XPosition=1927
+DisplayPort-0 DisplayPort-1 HDMI-A-0 YPosition=34
+Height 1080=1033
+ToolBarsMovable=Disabled
+Width 1920=956
+
+[Open-with settings]
+CompletionMode=1
+History=GN
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,opendocumentthumbnail,svgthumbnail
+
+[SettingsDialog]
+Height 1080=462
+Width 1920=540
+
+[ViewPropertiesDialog]
+Height 1080=298
+Width 1920=355
