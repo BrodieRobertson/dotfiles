@@ -1,7 +1,7 @@
 # settings
 
-(GimpGegl-gegl-layereffects-config "2024-01-18 19:23:45"
-    (time 1705568025)
+(GimpGegl-gegl-layereffects-config "2024-02-09 00:06:05"
+    (time 1707399365)
     (guichange strokeshadow)
     (blendmodebevel2 Multiply)
     (src "")

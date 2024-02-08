@@ -1,7 +1,7 @@
 # settings
 
-(GimpGegl-gegl-gaussian-blur-config "2024-01-18 19:25:16"
-    (time 1705568116)
+(GimpGegl-gegl-gaussian-blur-config "2024-02-09 00:07:02"
+    (time 1707399422)
     (std-dev-x 9.1600000000000001)
     (std-dev-y 9.1600000000000001)
     (filter auto)
